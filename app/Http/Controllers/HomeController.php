@@ -16,7 +16,7 @@ class HomeController extends Controller
 
         // Get data from DB
         $cars = Car::all();
-        dump($cars);
+        //dump($cars);
 
          return view('home', compact('cars'));
          
