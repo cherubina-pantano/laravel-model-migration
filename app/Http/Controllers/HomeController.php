@@ -3,16 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Car;
 
 class HomeController extends Controller
 {
     /***
-     *   HOME
+     *   HOMEPAGE
      *
      ***/
 
      public function index() {
-         return view('home');
+
+        // Get data from DB
+        $cars = Car::all();
+        dump($cars);
+
+         return view('home', compact('cars'));
          
      }
 }
