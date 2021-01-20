@@ -16,4 +16,23 @@
             </li>
         @endforeach
     </ul>
+
+    <!-- Logica VUEJS -->
+    <section id="app">
+        <h2>Bikes</h2>
+        <ul>
+            <li v-for="bike in bikes">
+                <h3>@{{bike.modello}}</h3>
+                <div class="brand">
+                    @{{bike.marca}}
+                </div>
+                <div class="plate">
+                    @{{bike.targa}}
+                </div>
+                <div class="power">
+                    @{{bike.cavalli}}
+                </div>            
+            </li>        
+        </ul>
+    </section>
 @endsection
